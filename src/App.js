@@ -13,15 +13,16 @@ class App extends Component {
   }
   handleClick = e => {
     e.preventDefault();
+
     let data = new FormData();
     data.append("file", this.state.file);
-    console.log(data);
 
     axios
       .post("/api/uploadToS3", data)
-      .then(response => console.log(response))
+      .then(response => alert("file uploaded!"))
       .catch(console.log);
   };
+
   handleChange = e => {
     e.preventDefault();
 
