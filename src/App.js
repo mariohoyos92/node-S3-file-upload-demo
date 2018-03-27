@@ -26,7 +26,7 @@ class App extends Component {
   handleChange = e => {
     e.preventDefault();
 
-    this.setState({ file: e.target.files[0] }, () => console.log(this.state));
+    this.setState({ file: e.target.files[0] });
   };
   render() {
     return (

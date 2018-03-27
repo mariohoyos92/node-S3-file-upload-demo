@@ -7,7 +7,7 @@ const s3 = new AWS.S3({ params: { Bucket: "devm-fileupload-demo" } });
 module.exports = {
   uploadToS3: (req, res, next) => {
     const file = req.files.file;
-    console.log(file);
+    console.log("File:", file);
 
     fs.readFile(file.path, function(err, data) {
       if (err) throw err; // Something went wrong!
